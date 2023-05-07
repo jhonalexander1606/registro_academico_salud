@@ -1,14 +1,13 @@
 # se importa la libreria tkinter con todas sus funciones
 from tkinter import *
 from tkinter import messagebox
-
+import tkinter as tk
 # funciones por definir 
 
-
-ventana_principal = Tk()
+ventana_principal = tk.Tk()
 
 # titulo de la ventana
-ventana_principal.title("Temperatura 1.0")
+ventana_principal.title("regisgtro")
 
 # tamaño de la ventana
 ventana_principal.geometry("600x500")
@@ -19,6 +18,10 @@ ventana_principal.resizable(False, False)
 # color de fondo de la ventana
 ventana_principal.config(bg="white")
 
+#cambio del icono de la ventana principal 
+icon = tk.PhotoImage(file="img/logo_uis.png")
+ventana_principal.iconphoto(True, icon) 
+
 #--------------------------------
 # variables globales
 #--------------------------------
@@ -26,30 +29,36 @@ ventana_principal.config(bg="white")
 #imagen de fondo ventana principal
 f_vp = PhotoImage(file="img/fondo_ven_p.png")
 
-# frame fondo de la ventana principal
+# label fondo de la ventana principal
 
 fondo_ventana_prin = Label(ventana_principal, image = f_vp) 
 fondo_ventana_prin.place(x= 0, y=0)
 
 #titulo de la ventana principal
 
-titulo = Label(fondo_ventana_prin, text="Registro academico")
+titulo = Label(fondo_ventana_prin, text="Registro estudiante")
 titulo.config(bg = "lemon chiffon",fg="black", font=("Helvetica", 20))
-titulo.place(x=240,y=10)
+titulo.place(x=180,y=10)
 
 
-# imagen para el frame de notas
+# imagen para el label de notas
 
-fondo_fr_notas = PhotoImage(file="img/fondo_frame_notas.png", width=640 )
+fondo_fr_notas = PhotoImage(file="img/fondo_frame_notas.png" )
 
 #--------------------------------
-# frame entrada datos
+# label entrada datos notas
 #--------------------------------
 
-frame_entrada = Label(ventana_principal, image =fondo_fr_notas )
-frame_entrada.config(bg="white", width=675, height=180)
-frame_entrada.place(x=10, y=60)
+label_entrada = Label(ventana_principal, image =fondo_fr_notas )
+label_entrada.config(bg="white", width=575, height=215)
+label_entrada.place(x=10, y=60)
 
+
+#imagene del label de notas
+
+nota_i= PhotoImage(file = "img/notas.png") 
+label_logo = Label(label_entrada, image = nota_i)
+label_logo.place(x= 30, y = 15)
 
 
 # imagenes de fondo
