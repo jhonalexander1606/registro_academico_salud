@@ -56,7 +56,7 @@ def abrir_toplevel_notas_calculo1():
     entry_c.place(x=400,y=160)
 
     # etiqueta para valor corte 4
-    lb_c = Label(toplevel_notas_quimica, text = "corte 4 = ")
+    lb_c = Label(toplevel_notas_calculo, text = "corte 4 = ")
     lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
     lb_c.place(x=260, y=210)
 
@@ -66,9 +66,19 @@ def abrir_toplevel_notas_calculo1():
     entry_c.place(x=400,y=210)
 
     # boton de calcular_ calculo 1
-    bt_calcular = Button(toplevel_notas_calculo, text="aceptar",)
+    bt_calcular = Button(toplevel_notas_calculo, text="aceptar",command=aceptar_c)
     bt_calcular.place(x=390, y=250, width=90,height= 40)
     bt_calcular.config(bg = "lavenderblush2")
+
+def aceptar_c():
+    global n1_c,n2_c,n3_c,n4_c
+    global nf_c
+    n1_c = int(nota_1_calculo.get())
+    n2_c = int(nota_2_calculo.get())
+    n3_c = int(nota_3_calculo.get())
+    n4_c = int(nota_4_calculo.get())
+
+    toplevel_notas_calculo.destroy()
 
 def abrir_toplevel_notas_quimica():
     global toplevel_notas_quimica
@@ -133,11 +143,11 @@ def abrir_toplevel_notas_quimica():
     entry_c.place(x=400,y=210)
 
     # boton de calcular_ calculo 1
-    bt_calcular = Button(toplevel_notas_quimica, text="aceptar", command=aceptar)
+    bt_calcular = Button(toplevel_notas_quimica, text="aceptar", command=aceptar_q)
     bt_calcular.place(x=390, y=250, width=90,height= 40)
     bt_calcular.config(bg = "lavenderblush2")
 
-def aceptar():
+def aceptar_q():
     global n1_q,n2_q,n3_q,n4_q
     global nf_q
     n1_q = int(nota_1_quimica.get())
@@ -148,10 +158,18 @@ def aceptar():
     toplevel_notas_quimica.destroy()
 
 def boton_calcular_n():
-    t_resultados_n_q.delete("1.0","end")
+    t_resultados_n.delete("1.0","end")
     if q.get()== 1 :
         nf_q =(n1_q+n2_q+n3_q+n4_q)/4
-        t_resultados_n_q.insert(INSERT,f"Quimica: {nf_q}")
+        t_resultados_n.insert(INSERT,f"Quimica= {nf_q}")
+
+    if c.get()== 1:
+        nf_c=(n1_c+n2_c+n3_c+n4_c)/4
+        t_resultados_n.insert(INSERT,f"\nCalculo 1= {nf_c}")
+
+    if q.get()==0 and c.get()==0:
+        t_resultados_n.insert(INSERT,"debe escoger almenos una opcion")
+
 
 
     #     kel = cent + 273.15
@@ -192,7 +210,7 @@ nota_4_quimica = StringVar()
 nf_q = StringVar()
 q = IntVar()
 c = IntVar()
-nota_1_calculo = StringVar
+nota_1_calculo = StringVar()
 nota_2_calculo = StringVar()
 nota_3_calculo = StringVar()
 nota_4_calculo = StringVar()
@@ -290,28 +308,30 @@ titulo_n_f.place(x=385,y=10)
 
 # f_label_text=PhotoImage(file="img/.png")
 
-t_resultados_n_q= Text(label_entrada)
-t_resultados_n_q.config(bg="antiquewhite2", fg="green", font=("times new roman",15))
-t_resultados_n_q.place(x=381,y=56,width=180,height=140)
+t_resultados_n= Text(label_entrada)
+t_resultados_n.config(bg="antiquewhite2", fg="gray1", font=("times new roman",15))
+t_resultados_n.place(x=381,y=56,width=180,height=140)
 
 # boton de calcular
 
 bt_calcular_n = Button(label_entrada, text="calcular",command=boton_calcular_n)
-bt_calcular_n.place(x=250, y=30, width=90,height= 40)
+bt_calcular_n.place(x=250, y=10, width=90,height= 40)
 bt_calcular_n.config(bg = "darkolivegreen3",font=("Helvetica", 15))
 
 # checkbutton de eleccion de quimica
 
 cb_k = Checkbutton(label_entrada, text="Quimica",variable=q)
 cb_k.config(bg="cadetblue2", fg="black", font=("Helvetica", 18))
-cb_k.place(x=223, y=80)
+cb_k.place(x=223, y=60)
 
 # checkbutton de eleccion de calculo-1
 
-cb_k = Checkbutton(label_entrada, text="Calculo-1",)
+cb_k = Checkbutton(label_entrada, text="Calculo-1",variable=c)
 cb_k.config(bg="red3", fg="black", font=("Helvetica", 18))
-cb_k.place(x=223, y=130)
+cb_k.place(x=223, y=110)
 
+bt_borrar = Button(label_entrada, text="Borrar")
+bt_borrar.config(bg="light steel blue",fg= "black", font=("helvetica", 15) )
+bt_borrar.place(x=250,y=160, width=80, height=35)
 # run
-# se ejecuta el metodo mainloop() de la clase Tk() a través de la instancia ventana_principal. Este metodo despliega la ventana en pantalla y queda a la espera de lo que el usuario haga (click en un boton, escribir, etc).  Cada acción del usuario se conoce como un evento.  El método mainloop() es un bucle infinito.
 ventana_principal.mainloop()
