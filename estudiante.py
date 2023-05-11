@@ -31,7 +31,7 @@ def abrir_toplevel_notas_calculo1():
 
     # caja de texto para corte 1
     entry_c = Entry(toplevel_notas_calculo, textvariable=nota_1_calculo)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.focus_set()
     entry_c.place(x=400,y=60)
 
@@ -42,7 +42,7 @@ def abrir_toplevel_notas_calculo1():
 
     # caja de texto para corte 2
     entry_c = Entry(toplevel_notas_calculo, textvariable=nota_2_calculo)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=110)
 
     # etiqueta para valor corte 3
@@ -52,7 +52,7 @@ def abrir_toplevel_notas_calculo1():
 
     # caja de texto para corte 3
     entry_c = Entry(toplevel_notas_calculo, textvariable=nota_3_calculo)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=160)
 
     # etiqueta para valor corte 4
@@ -62,7 +62,7 @@ def abrir_toplevel_notas_calculo1():
 
     # caja de texto para corte 4
     entry_c = Entry(toplevel_notas_calculo, textvariable=nota_4_calculo)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=210)
 
     # boton de calcular_ calculo 1
@@ -108,7 +108,7 @@ def abrir_toplevel_notas_quimica():
 
     # caja de texto para corte 1
     entry_c = Entry(toplevel_notas_quimica, textvariable=nota_1_quimica)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.focus_set()
     entry_c.place(x=400,y=60)
 
@@ -119,7 +119,7 @@ def abrir_toplevel_notas_quimica():
 
     # caja de texto para corte 2
     entry_c = Entry(toplevel_notas_quimica, textvariable=nota_2_quimica)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=110)
 
     # etiqueta para valor corte 3
@@ -129,7 +129,7 @@ def abrir_toplevel_notas_quimica():
 
     # caja de texto para corte 3
     entry_c = Entry(toplevel_notas_quimica, textvariable=nota_3_quimica)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=160)
 
     # etiqueta para valor corte 4
@@ -139,7 +139,7 @@ def abrir_toplevel_notas_quimica():
 
     # caja de texto para corte 4
     entry_c = Entry(toplevel_notas_quimica, textvariable=nota_4_quimica)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=210)
 
     # boton de calcular_ calculo 1
@@ -185,7 +185,7 @@ def abrir_toplevel_notas_programacion():
 
     # caja de texto para corte 1
     entry_c = Entry(toplevel_notas_programacion, textvariable=nota_1_programacion)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.focus_set()
     entry_c.place(x=400,y=60)
 
@@ -196,7 +196,7 @@ def abrir_toplevel_notas_programacion():
 
     # caja de texto para corte 2
     entry_c = Entry(toplevel_notas_programacion, textvariable=nota_2_programacion)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=110)
 
     # etiqueta para valor corte 3
@@ -206,7 +206,7 @@ def abrir_toplevel_notas_programacion():
 
     # caja de texto para corte 3
     entry_c = Entry(toplevel_notas_programacion, textvariable=nota_3_programacion)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=160)
 
     # etiqueta para valor corte 4
@@ -216,7 +216,7 @@ def abrir_toplevel_notas_programacion():
 
     # caja de texto para corte 4
     entry_c = Entry(toplevel_notas_programacion, textvariable=nota_4_programacion)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=210)
 
     # boton de calcular_ programacion
@@ -265,7 +265,7 @@ def abrir_toplevel_notas_algebra():
 
     # caja de texto para corte 1
     entry_c = Entry(toplevel_notas_algebra, textvariable=nota_1_algebra)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.focus_set()
     entry_c.place(x=400,y=60)
 
@@ -276,7 +276,7 @@ def abrir_toplevel_notas_algebra():
 
     # caja de texto para corte 2
     entry_c = Entry(toplevel_notas_algebra, textvariable=nota_2_algebra)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=110)
 
     # etiqueta para valor corte 3
@@ -286,7 +286,7 @@ def abrir_toplevel_notas_algebra():
 
     # caja de texto para corte 3
     entry_c = Entry(toplevel_notas_algebra, textvariable=nota_3_algebra)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=160)
 
     # etiqueta para valor corte 4
@@ -296,7 +296,7 @@ def abrir_toplevel_notas_algebra():
 
     # caja de texto para corte 4
     entry_c = Entry(toplevel_notas_algebra, textvariable=nota_4_algebra)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.config(bg="light gray", fg="black", font=("Times New Roman", 18), width=6)
     entry_c.place(x=400,y=210)
 
     # boton de calcular_ programacion
@@ -313,6 +313,140 @@ def aceptar_a():
     n4_a = int(nota_4_algebra.get())
 
     toplevel_notas_algebra.destroy()
+
+def abrir_toplevel_imc():
+    global toplevel_imc
+    toplevel_imc = Toplevel()
+    toplevel_imc.title("indice de masa corporal")
+    toplevel_imc.resizable(False, False)
+    toplevel_imc.geometry("250x200")
+    toplevel_imc.config(bg="white")
+
+    #fondo del top level de algebra
+    ln_fondo = Label(toplevel_imc,image=fondo_top_imc)
+    ln_fondo.place(x=0,y=0)
+
+        # titulo del imc
+    lb_titulo_imc=Label(toplevel_imc,text="indice de masa corporal")
+    lb_titulo_imc.config(bg="saddle brown", fg="black", font=("Helvetica", 16))
+    lb_titulo_imc.place(x=10,y=10)
+
+    # altura
+
+    al_imc = Label(toplevel_imc, text = "altura = ",)
+    al_imc.config(bg="bisque3", fg="black", font=("Helvetica", 14))
+    al_imc.place(x=25, y=70)
+
+    # caja de texto para altura
+    entry_c = Entry(toplevel_imc, textvariable=al_1)
+    entry_c.config(bg="bisque3", fg="black", font=("Times New Roman", 18), width=6)
+    entry_c.focus_set()
+    entry_c.place(x=110,y=68)
+
+    #peso
+
+    pe_imc = Label(toplevel_imc, text = "Peso = ",)
+    pe_imc.config(bg="bisque3", fg="black", font=("Helvetica", 14))
+    pe_imc.place(x=25, y=110)
+
+    # caja de texto para peso
+    entry_c = Entry(toplevel_imc, textvariable=pe_1)
+    entry_c.config(bg="bisque3", fg="black", font=("Times New Roman", 18), width=6)
+    entry_c.place(x=110,y=109)
+
+    #boton aceptar
+
+    imc_aceptar = Button(toplevel_imc, text="aceptar", command=aceptar_imc)
+    imc_aceptar.place(x=80, y=150, width=90,height= 40)
+    imc_aceptar.config(bg = "khaki3")
+
+def aceptar_imc():
+    global peso, altura
+    global imc
+    peso = int(pe_1.get())
+    altura = float(al_1.get())
+
+    toplevel_imc.destroy()
+
+
+# funcion para boton de datos 
+def boton_datos():
+    global toplevel_dat
+    toplevel_dat = Toplevel()
+    toplevel_dat.title("Datos")
+    toplevel_dat.resizable(False, False)
+    toplevel_dat.geometry("250x200")
+    toplevel_dat.config(bg="white")
+
+    #fondo top level datos
+    fondo_da = Label(toplevel_dat,image=fondo_top_datos)
+    fondo_da.place(x=0,y=0)
+
+            # titulo del imc
+    lb_titulo_dat=Label(toplevel_dat,text="Datos")
+    lb_titulo_dat.config(bg="seagreen1", fg="black", font=("Helvetica", 16))
+    lb_titulo_dat.place(x=30,y=18)
+
+    # alergias
+
+    al_imc = Label(toplevel_dat, text = "alergias= ",)
+    al_imc.config(bg="cyan3", fg="black", font=("Helvetica", 14))
+    al_imc.place(x=25, y=70)
+
+    # caja de texto para alergias
+    entry_c = Entry(toplevel_dat, textvariable=ale_1)
+    entry_c.config(bg="cyan3", fg="black", font=("Times New Roman", 18), width=10)
+    entry_c.focus_set()
+    entry_c.place(x=120,y=68)
+
+    #tipo de sangre
+
+    pe_imc = Label(toplevel_dat, text = "Sangre = ",)
+    pe_imc.config(bg="cyan3", fg="black", font=("Helvetica", 14))
+    pe_imc.place(x=25, y=110)
+
+    # caja de texto para tipo de sangre
+    entry_c = Entry(toplevel_dat, textvariable=san)
+    entry_c.config(bg="cyan3", fg="black", font=("Times New Roman", 18), width=6)
+    entry_c.place(x=120,y=109)
+
+    #boton de aceptar a datos  
+    dat_aceptar = Button(toplevel_dat, text="aceptar", command=aceptar_dat)
+    dat_aceptar.place(x=80, y=150, width=90,height= 40)
+    dat_aceptar.config(bg = "khaki3")
+
+def aceptar_dat():
+    global alergias
+    global sangre
+    alergias = str(ale_1.get())
+    sangre = str(san.get())
+
+    toplevel_dat.destroy()
+
+
+
+
+
+# funcion para boton registro
+
+def registro_s():
+    t_resultados_s.delete("1.0","end")
+    imc = peso // (altura**2)
+    ale_1= alergias
+    san = sangre
+    t_resultados_s.insert(INSERT,f"Tu indice de masa corporal es:\n {imc} ")
+
+    t_resultados_s.insert(INSERT,f"\neres alergico a:\n{ale_1}\ntu tipo de sangre es:\n{san}")
+
+
+# boton para borrar
+
+def boton_borrar_s():
+        messagebox.showinfo("Registro medico", "Los datos serán borrados")
+        b.set("")
+        t_resultados_s.delete("1.0","end")
+
+
 
 def boton_calcular_n():
     t_resultados_n.delete("1.0","end")
@@ -396,7 +530,14 @@ nf_a= StringVar()
 #variable nombre estudiante
 nom = StringVar
 nombre_e= StringVar()
-
+#variable del entry de altura y peso
+altura= StringVar()
+peso= StringVar()
+pe_1= StringVar()
+al_1 =StringVar()
+imc= StringVar()
+ale_1 = StringVar()
+san= StringVar()
 b=StringVar()
 #---------------------------------------------------------------------------
 
@@ -434,6 +575,12 @@ logo_top_programacion = PhotoImage(file="img/logo_programacion.png")
 
 logo_top_algebra=PhotoImage(file="img/logo_algebra.png")
 
+# fondo de top level del imc
+
+fondo_top_imc = PhotoImage(file="img/fondo_imc.png")
+
+# fondo de top level de datos 
+fondo_top_datos = PhotoImage(file="img/fondo_datos.png")
 
 # fondo de la ventana principal
 
@@ -522,30 +669,30 @@ label_logo.config(bg= "light blue1")
 # cuadro de resultados de  la salud
 
 t_resultados_s= Text(label_entrada_s)
-t_resultados_s.config(bg= "lightblue1",fg = "black", font=("Helvetica", 20))
+t_resultados_s.config(bg= "lightblue1",fg = "black", font=("Helvetica", 10))
 t_resultados_s.place(x=330,y=60, width=210,height=140)
 
 # boton top level de indice de masa corporal
 
-b_imc = Button(label_entrada_s, text="IMC")
+b_imc = Button(label_entrada_s, text="IMC", command=abrir_toplevel_imc)
 b_imc.place(x=320,y=10, width=90,height=40)
 b_imc.config(bg="darkolivegreen3",font=("helvetica", 15))
 
 # boton top level de datos medicos
 
-b_datos = Button(label_entrada_s, text="Datos")
+b_datos = Button(label_entrada_s, text="Datos",command=boton_datos)
 b_datos.place(x=460,y=10, width=90,height=40)
 b_datos.config(bg="red3",font=("helvetica", 15))
 
 # boton registro
 
-bt_registro = Button(label_entrada_s, text="Borrar")
+bt_registro = Button(label_entrada_s, text="Borrar", command=boton_borrar_s)
 bt_registro.place(x=225, y=140, width=90,height= 40)
 bt_registro.config(bg = "plum3",font=("Helvetica", 15))
 
 # boton borrar
 
-bt_registro = Button(label_entrada_s, text="Registro")
+bt_registro = Button(label_entrada_s, text="Registro",command=registro_s)
 bt_registro.place(x=225, y=80, width=90,height= 40)
 bt_registro.config(bg = "khaki",font=("Helvetica", 15))
 
