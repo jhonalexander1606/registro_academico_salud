@@ -495,6 +495,8 @@ bt_notas = Button(fondo_ventana_prin, text="Algebra", command=abrir_toplevel_not
 bt_notas.place(x=480,y=50,width=80,height=30)
 bt_notas.config(bg = "peach puff")
 
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 # titulo del registro salud
 titulo_n = Label(fondo_ventana_prin, text="Registro medico")
 titulo_n.config(bg = "lavender blush",fg="black", font=("Helvetica", 20))
@@ -517,8 +519,35 @@ label_logo = Label(label_entrada_s, image = salud_i)
 label_logo.place(x= 8, y = 15)
 label_logo.config(bg= "light blue1")
 
+# cuadro de resultados de  la salud
 
-#imagen para el label de texto
+t_resultados_s= Text(label_entrada_s)
+t_resultados_s.config(bg= "lightblue1",fg = "black", font=("Helvetica", 20))
+t_resultados_s.place(x=330,y=60, width=210,height=140)
+
+# boton top level de indice de masa corporal
+
+b_imc = Button(label_entrada_s, text="IMC")
+b_imc.place(x=320,y=10, width=90,height=40)
+b_imc.config(bg="darkolivegreen3",font=("helvetica", 15))
+
+# boton top level de datos medicos
+
+b_datos = Button(label_entrada_s, text="Datos")
+b_datos.place(x=460,y=10, width=90,height=40)
+b_datos.config(bg="red3",font=("helvetica", 15))
+
+# boton registro
+
+bt_registro = Button(label_entrada_s, text="Borrar")
+bt_registro.place(x=225, y=140, width=90,height= 40)
+bt_registro.config(bg = "plum3",font=("Helvetica", 15))
+
+# boton borrar
+
+bt_registro = Button(label_entrada_s, text="Registro")
+bt_registro.place(x=225, y=80, width=90,height= 40)
+bt_registro.config(bg = "khaki",font=("Helvetica", 15))
 
 
 # titulo de notas final de semestre
