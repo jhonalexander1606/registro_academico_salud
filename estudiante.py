@@ -147,73 +147,6 @@ def abrir_toplevel_notas_quimica():
     bt_calcular.place(x=390, y=250, width=90,height= 40)
     bt_calcular.config(bg = "lavenderblush2")
 
-def abrir_toplevel_notas_programacion():
-    global toplevel_notas_programacion
-    toplevel_notas_programacion = Toplevel()
-    toplevel_notas_programacion.title("Promedio notas")
-    toplevel_notas_programacion.resizable(False, False)
-    toplevel_notas_programacion.geometry("600x300")
-    toplevel_notas_programacion.config(bg="white")
-
-    #fondo del top level de quimica
-    ln_fondo = Label(toplevel_notas_quimica, image=fondo_top_programacion)
-    ln_fondo.place(x=0,y=0)
-
-    # logo de la app
-    lb_logo_n = Label(toplevel_notas_quimica, image=logo_top_quimica, bg="white")
-    lb_logo_n.place(x=20,y=50)
-
-    # titulo de las notas de quimica
-    lb_titulo_quimica=Label(toplevel_notas_quimica,text="Notas Semestre")
-    lb_titulo_quimica.config(bg="misty rose", fg="black", font=("Helvetica", 18))
-    lb_titulo_quimica.place(x=280,y=10)
-
-    # etiqueta para valor corte 1
-    lb_c = Label(toplevel_notas_quimica, text = "corte 1 = ",)
-    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
-    lb_c.place(x=260, y=60)
-
-    # caja de texto para corte 1
-    entry_c = Entry(toplevel_notas_quimica, textvariable=nota_1_quimica)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
-    entry_c.focus_set()
-    entry_c.place(x=400,y=60)
-
-    # etiqueta para valor corte 2
-    lb_c = Label(toplevel_notas_quimica, text = "corte 2 = ")
-    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
-    lb_c.place(x=260, y=110)
-
-    # caja de texto para corte 2
-    entry_c = Entry(toplevel_notas_quimica, textvariable=nota_2_quimica)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
-    entry_c.place(x=400,y=110)
-
-    # etiqueta para valor corte 3
-    lb_c = Label(toplevel_notas_quimica, text = "corte 3 = ")
-    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
-    lb_c.place(x=260, y=160)
-
-    # caja de texto para corte 3
-    entry_c = Entry(toplevel_notas_quimica, textvariable=nota_3_quimica)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
-    entry_c.place(x=400,y=160)
-
-    # etiqueta para valor corte 4
-    lb_c = Label(toplevel_notas_quimica, text = "corte 4 = ")
-    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
-    lb_c.place(x=260, y=210)
-
-    # caja de texto para corte 4
-    entry_c = Entry(toplevel_notas_quimica, textvariable=nota_4_quimica)
-    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
-    entry_c.place(x=400,y=210)
-
-    # boton de calcular_ calculo 1
-    bt_calcular = Button(toplevel_notas_quimica, text="aceptar", command=aceptar_q)
-    bt_calcular.place(x=390, y=250, width=90,height= 40)
-    bt_calcular.config(bg = "lavenderblush2")
-
 def aceptar_q():
     global n1_q,n2_q,n3_q,n4_q
     global nf_q
@@ -224,6 +157,84 @@ def aceptar_q():
 
     toplevel_notas_quimica.destroy()
 
+def abrir_toplevel_notas_programacion():
+    global toplevel_notas_programacion
+    toplevel_notas_programacion = Toplevel()
+    toplevel_notas_programacion.title("Promedio notas")
+    toplevel_notas_programacion.resizable(False, False)
+    toplevel_notas_programacion.geometry("600x300")
+    toplevel_notas_programacion.config(bg="white")
+
+    #fondo del top level de quimica
+    ln_fondo = Label(toplevel_notas_programacion, image=fondo_top_programacion)
+    ln_fondo.place(x=0,y=0)
+
+    # logo de la app
+    lb_logo_n = Label(toplevel_notas_programacion, image=logo_top_programacion, bg="white")
+    lb_logo_n.place(x=20,y=50)
+
+    # titulo de las notas de quimica
+    lb_titulo_quimica=Label(toplevel_notas_programacion,text="Notas Semestre")
+    lb_titulo_quimica.config(bg="misty rose", fg="black", font=("Helvetica", 18))
+    lb_titulo_quimica.place(x=280,y=10)
+
+    # etiqueta para valor corte 1
+    lb_c = Label(toplevel_notas_programacion, text = "corte 1 = ",)
+    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
+    lb_c.place(x=260, y=60)
+
+    # caja de texto para corte 1
+    entry_c = Entry(toplevel_notas_programacion, textvariable=nota_1_programacion)
+    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.focus_set()
+    entry_c.place(x=400,y=60)
+
+    # etiqueta para valor corte 2
+    lb_c = Label(toplevel_notas_programacion, text = "corte 2 = ")
+    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
+    lb_c.place(x=260, y=110)
+
+    # caja de texto para corte 2
+    entry_c = Entry(toplevel_notas_programacion, textvariable=nota_2_programacion)
+    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.place(x=400,y=110)
+
+    # etiqueta para valor corte 3
+    lb_c = Label(toplevel_notas_programacion, text = "corte 3 = ")
+    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
+    lb_c.place(x=260, y=160)
+
+    # caja de texto para corte 3
+    entry_c = Entry(toplevel_notas_programacion, textvariable=nota_3_programacion)
+    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.place(x=400,y=160)
+
+    # etiqueta para valor corte 4
+    lb_c = Label(toplevel_notas_programacion, text = "corte 4 = ")
+    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
+    lb_c.place(x=260, y=210)
+
+    # caja de texto para corte 4
+    entry_c = Entry(toplevel_notas_programacion, textvariable=nota_4_programacion)
+    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.place(x=400,y=210)
+
+    # boton de calcular_ programacion
+    bt_calcular = Button(toplevel_notas_programacion, text="aceptar", command=aceptar_p)
+    bt_calcular.place(x=390, y=250, width=90,height= 40)
+    bt_calcular.config(bg = "lavenderblush2")
+
+def aceptar_p():
+    global n1_p,n2_p,n3_p,n4_p
+    global nf_p
+    n1_p = int(nota_1_programacion.get())
+    n2_p = int(nota_2_programacion.get())
+    n3_p = int(nota_3_programacion.get())
+    n4_p = int(nota_4_programacion.get())
+
+    toplevel_notas_programacion.destroy()
+
+
 def boton_calcular_n():
     t_resultados_n.delete("1.0","end")
     if q.get()== 1 :
@@ -233,9 +244,14 @@ def boton_calcular_n():
     if c.get()== 1:
         nf_c=(n1_c+n2_c+n3_c+n4_c)/4
         t_resultados_n.insert(INSERT,f"\nCalculo 1= {nf_c}")
+    
+    if p.get()== 1:
+        nf_p=(n1_p+n2_p+n3_p+n4_p)/4
+        t_resultados_n.insert(INSERT,f"\nProgramacion= {nf_p}")
 
-    if q.get()==0 and c.get()==0:
+    if q.get()==0 and c.get()==0 and p.get()==0:
         t_resultados_n.insert(INSERT,"debe escoger almenos una opcion")
+    
 
 def boton_borrar_n():
         messagebox.showinfo("Registro notas", "Los datos serán borrados")
@@ -271,12 +287,22 @@ nota_4_quimica = StringVar()
 nf_q = StringVar()
 q = IntVar()
 c = IntVar()
+p = IntVar()
 nota_1_calculo = StringVar()
 nota_2_calculo = StringVar()
 nota_3_calculo = StringVar()
 nota_4_calculo = StringVar()
 nf_c= StringVar()
+nota_1_programacion = StringVar()
+nota_2_programacion = StringVar()
+nota_3_programacion = StringVar()
+nota_4_programacion = StringVar()
+nf_p= StringVar()
+
 b=StringVar()
+
+
+
 
 #---------------------------------------------------------------------------
 
@@ -304,6 +330,10 @@ logo_top_quimica = PhotoImage(file="img/logo_quimica.png")
 #logo de toplevel de calculo
 
 logo_top_calculo = PhotoImage(file="img/logo_calculo.png")
+
+# logo de top level de programación
+
+logo_top_programacion = PhotoImage(file="img/logo_programacion.png")
 
 
 # fondo de la ventana principal
@@ -346,7 +376,7 @@ bt_notas.place(x=380, y=10, width=80,height= 30)
 bt_notas.config(bg = "peach puff")
 
 #boton de label de notas de programacion
-bt_notas = Button(fondo_ventana_prin, text="Programación")
+bt_notas = Button(fondo_ventana_prin, text="Programación", command=abrir_toplevel_notas_programacion)
 bt_notas.place(x=480,y=10,width=80,height=30)
 bt_notas.config(bg = "peach puff")
 
@@ -381,7 +411,7 @@ titulo_n_f= Label(label_entrada, text="Notas Finales")
 titulo_n_f.config(bg = "lightcyan2",fg="black", font=("Helvetica", 20))
 titulo_n_f.place(x=385,y=10)
 
-# f_label_text=PhotoImage(file="img/.png")
+#cuadro de respuesta
 
 t_resultados_n= Text(label_entrada)
 t_resultados_n.config(bg="antiquewhite2", fg="gray1", font=("times new roman",15))
@@ -396,14 +426,18 @@ bt_calcular_n.config(bg = "darkolivegreen3",font=("Helvetica", 15))
 # checkbutton de eleccion de quimica
 
 cb_k = Checkbutton(label_entrada, text="Quimica",variable=q)
-cb_k.config(bg="cadetblue2", fg="black", font=("Helvetica", 18))
-cb_k.place(x=223, y=60)
+cb_k.config(bg="cadetblue2", fg="black", font=("Helvetica", 13))
+cb_k.place(x=223, y=53)
 
 # checkbutton de eleccion de calculo-1
 
 cb_k = Checkbutton(label_entrada, text="Calculo-1",variable=c)
-cb_k.config(bg="red3", fg="black", font=("Helvetica", 18))
-cb_k.place(x=223, y=110)
+cb_k.config(bg="red3", fg="black", font=("Helvetica", 13))
+cb_k.place(x=223, y=89)
+
+cb_k = Checkbutton(label_entrada, text="Programacion",variable=p)
+cb_k.config(bg="royalblue3", fg="black", font=("Helvetica", 13))
+cb_k.place(x=223, y=124)
 
 bt_borrar = Button(label_entrada, text="Borrar",command=boton_borrar_n)
 bt_borrar.config(bg="light steel blue",fg= "black", font=("helvetica", 15) )
