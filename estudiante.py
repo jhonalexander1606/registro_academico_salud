@@ -235,11 +235,91 @@ def aceptar_p():
     toplevel_notas_programacion.destroy()
 
 
+# top level de algebra
+
+def abrir_toplevel_notas_algebra():
+    global toplevel_notas_algebra
+    toplevel_notas_algebra = Toplevel()
+    toplevel_notas_algebra.title("Promedio notas")
+    toplevel_notas_algebra.resizable(False, False)
+    toplevel_notas_algebra.geometry("600x300")
+    toplevel_notas_algebra.config(bg="white")
+
+    #fondo del top level de algebra
+    ln_fondo = Label(toplevel_notas_algebra, image=fondo_top_algebra)
+    ln_fondo.place(x=0,y=0)
+
+    # logo de la app
+    lb_logo_n = Label(toplevel_notas_algebra, image=logo_top_algebra, bg="white")
+    lb_logo_n.place(x=20,y=50)
+
+    # titulo de las notas de algebra
+    lb_titulo_algebra=Label(toplevel_notas_algebra,text="Notas Semestre")
+    lb_titulo_algebra.config(bg="misty rose", fg="black", font=("Helvetica", 18))
+    lb_titulo_algebra.place(x=280,y=10)
+
+    # etiqueta para valor corte 1
+    lb_c = Label(toplevel_notas_algebra, text = "corte 1 = ",)
+    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
+    lb_c.place(x=260, y=60)
+
+    # caja de texto para corte 1
+    entry_c = Entry(toplevel_notas_algebra, textvariable=nota_1_algebra)
+    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.focus_set()
+    entry_c.place(x=400,y=60)
+
+    # etiqueta para valor corte 2
+    lb_c = Label(toplevel_notas_algebra, text = "corte 2 = ")
+    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
+    lb_c.place(x=260, y=110)
+
+    # caja de texto para corte 2
+    entry_c = Entry(toplevel_notas_algebra, textvariable=nota_2_algebra)
+    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.place(x=400,y=110)
+
+    # etiqueta para valor corte 3
+    lb_c = Label(toplevel_notas_algebra, text = "corte 3 = ")
+    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
+    lb_c.place(x=260, y=160)
+
+    # caja de texto para corte 3
+    entry_c = Entry(toplevel_notas_algebra, textvariable=nota_3_algebra)
+    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.place(x=400,y=160)
+
+    # etiqueta para valor corte 4
+    lb_c = Label(toplevel_notas_algebra, text = "corte 4 = ")
+    lb_c.config(bg="light gray", fg="black", font=("Helvetica", 18))
+    lb_c.place(x=260, y=210)
+
+    # caja de texto para corte 4
+    entry_c = Entry(toplevel_notas_algebra, textvariable=nota_4_algebra)
+    entry_c.config(bg="light gray", fg="blue", font=("Times New Roman", 18), width=6)
+    entry_c.place(x=400,y=210)
+
+    # boton de calcular_ programacion
+    bt_calcular = Button(toplevel_notas_algebra, text="aceptar", command=aceptar_a)
+    bt_calcular.place(x=390, y=250, width=90,height= 40)
+    bt_calcular.config(bg = "lavenderblush2")
+
+def aceptar_a():
+    global n1_a,n2_a,n3_a,n4_a
+    global nf_a
+    n1_a = int(nota_1_algebra.get())
+    n2_a = int(nota_2_algebra.get())
+    n3_a = int(nota_3_algebra.get())
+    n4_a = int(nota_4_algebra.get())
+
+    toplevel_notas_algebra.destroy()
+
 def boton_calcular_n():
     t_resultados_n.delete("1.0","end")
     if q.get()== 1 :
         nf_q =(n1_q+n2_q+n3_q+n4_q)/4
-        t_resultados_n.insert(INSERT,f"Quimica= {nf_q}")
+        nom =str(nombre_e.get())
+        t_resultados_n.insert(INSERT,f" {nom} \ntus notas son:\nQuimica= {nf_q}")
 
     if c.get()== 1:
         nf_c=(n1_c+n2_c+n3_c+n4_c)/4
@@ -249,7 +329,11 @@ def boton_calcular_n():
         nf_p=(n1_p+n2_p+n3_p+n4_p)/4
         t_resultados_n.insert(INSERT,f"\nProgramacion= {nf_p}")
 
-    if q.get()==0 and c.get()==0 and p.get()==0:
+    if a.get()== 1:
+        nf_a= (n1_a+n2_a+n3_a+n4_a)/4
+        t_resultados_n.insert(INSERT,f"\nAlgebra= {nf_a}")
+
+    if q.get()==0 and c.get()==0 and p.get()==0 and a.get()==0:
         t_resultados_n.insert(INSERT,"debe escoger almenos una opcion")
     
 
@@ -280,36 +364,45 @@ ventana_principal.iconphoto(True, icon)
 #--------------------------------
 # variables globales
 #--------------------------------
+#variables de quimica
 nota_1_quimica = StringVar()
 nota_2_quimica = StringVar()
 nota_3_quimica = StringVar()
 nota_4_quimica = StringVar()
 nf_q = StringVar()
+#variables para los checkbutton
 q = IntVar()
 c = IntVar()
 p = IntVar()
+a = IntVar()
+#variables para calculo
 nota_1_calculo = StringVar()
 nota_2_calculo = StringVar()
 nota_3_calculo = StringVar()
 nota_4_calculo = StringVar()
 nf_c= StringVar()
+#variables para programacion
 nota_1_programacion = StringVar()
 nota_2_programacion = StringVar()
 nota_3_programacion = StringVar()
 nota_4_programacion = StringVar()
 nf_p= StringVar()
+#variables para algebra
+nota_1_algebra = StringVar()
+nota_2_algebra = StringVar()
+nota_3_algebra = StringVar()
+nota_4_algebra = StringVar()
+nf_a= StringVar()
+#variable nombre estudiante
+nom = StringVar
+nombre_e= StringVar()
 
 b=StringVar()
-
-
-
-
 #---------------------------------------------------------------------------
 
 #fondo de top level de programacion
 
 fondo_top_programacion = PhotoImage(file="img/fondo_top_programacion.png")
-
 
 # fondo de toplevel de quimica
 fondo_top_quimica=PhotoImage(file="img/fondo_top_quimica.png")
@@ -318,7 +411,9 @@ fondo_top_quimica=PhotoImage(file="img/fondo_top_quimica.png")
 
 fondo_top_calculo=PhotoImage(file="img/fondo_top_calculo.png")
 
-#
+# fondo de top level de algebra
+
+fondo_top_algebra=PhotoImage(file="img/fondo_top_algebra.png")
 
 #imagen de fondo ventana principal
 f_vp = PhotoImage(file="img/fondo_ven_p.png")
@@ -335,6 +430,10 @@ logo_top_calculo = PhotoImage(file="img/logo_calculo.png")
 
 logo_top_programacion = PhotoImage(file="img/logo_programacion.png")
 
+# logo de top level de algebra
+
+logo_top_algebra=PhotoImage(file="img/logo_algebra.png")
+
 
 # fondo de la ventana principal
 
@@ -346,6 +445,17 @@ fondo_ventana_prin.place(x= 0, y=0)
 titulo_n = Label(fondo_ventana_prin, text="Registro academico")
 titulo_n.config(bg = "blanched almond",fg="black", font=("Helvetica", 20))
 titulo_n.place(x=20,y=10)
+
+# nombre estudiante titulo
+nombre = Label(fondo_ventana_prin, text="Nombre:")
+nombre.config(bg = "lightblue4",fg="black", font=("Helvetica", 15))
+nombre.place(x=20,y=55)
+
+#entry para el nombre:
+entry_n = Entry(fondo_ventana_prin, textvariable=nombre_e)
+entry_n.config(bg="lightblue3", fg="black", font=("Times New Roman", 18), width=20)
+entry_n.focus_set()
+entry_n.place(x=110,y=55)
 
 # imagen para el label de notas
 
@@ -367,7 +477,7 @@ label_logo.place(x= 8, y = 15)
 
 # boton de label de notas de QUIMICA
 bt_notas = Button(fondo_ventana_prin, text="Quimica", command=abrir_toplevel_notas_quimica)
-bt_notas.place(x=280, y=10, width=80,height= 30)
+bt_notas.place(x=380, y=50, width=80,height= 30)
 bt_notas.config(bg = "peach puff")
 
 # boton de label de notas de CALCULO 1
@@ -378,6 +488,11 @@ bt_notas.config(bg = "peach puff")
 #boton de label de notas de programacion
 bt_notas = Button(fondo_ventana_prin, text="Programación", command=abrir_toplevel_notas_programacion)
 bt_notas.place(x=480,y=10,width=80,height=30)
+bt_notas.config(bg = "peach puff")
+
+#boton de label de notas de algebra
+bt_notas = Button(fondo_ventana_prin, text="Algebra", command=abrir_toplevel_notas_algebra)
+bt_notas.place(x=480,y=50,width=80,height=30)
 bt_notas.config(bg = "peach puff")
 
 # titulo del registro salud
@@ -415,33 +530,42 @@ titulo_n_f.place(x=385,y=10)
 
 t_resultados_n= Text(label_entrada)
 t_resultados_n.config(bg="antiquewhite2", fg="gray1", font=("times new roman",15))
-t_resultados_n.place(x=381,y=56,width=180,height=140)
+t_resultados_n.place(x=376,y=56,width=198,height=110)
 
 # boton de calcular
 
 bt_calcular_n = Button(label_entrada, text="calcular",command=boton_calcular_n)
-bt_calcular_n.place(x=250, y=10, width=90,height= 40)
+bt_calcular_n.place(x=222, y=6, width=90,height= 40)
 bt_calcular_n.config(bg = "darkolivegreen3",font=("Helvetica", 15))
 
 # checkbutton de eleccion de quimica
 
 cb_k = Checkbutton(label_entrada, text="Quimica",variable=q)
-cb_k.config(bg="cadetblue2", fg="black", font=("Helvetica", 13))
-cb_k.place(x=223, y=53)
+cb_k.config(bg="cadetblue2", fg="black", font=("Helvetica", 15))
+cb_k.place(x=219, y=50)
 
 # checkbutton de eleccion de calculo-1
 
 cb_k = Checkbutton(label_entrada, text="Calculo-1",variable=c)
-cb_k.config(bg="red3", fg="black", font=("Helvetica", 13))
-cb_k.place(x=223, y=89)
+cb_k.config(bg="red3", fg="black", font=("Helvetica", 15))
+cb_k.place(x=219, y=91)
+
+#checkbutton de eleccion de programacion
 
 cb_k = Checkbutton(label_entrada, text="Programacion",variable=p)
-cb_k.config(bg="royalblue3", fg="black", font=("Helvetica", 13))
-cb_k.place(x=223, y=124)
+cb_k.config(bg="royalblue3", fg="black", font=("Helvetica", 15))
+cb_k.place(x=219, y=132)
+
+#checkbutton de eleccion de algebra
+
+cb_k = Checkbutton(label_entrada, text="Algebra",variable=a)
+cb_k.config(bg="springgreen2", fg="black", font=("Helvetica", 15))
+cb_k.place(x=219, y=174)
+
 
 bt_borrar = Button(label_entrada, text="Borrar",command=boton_borrar_n)
 bt_borrar.config(bg="light steel blue",fg= "black", font=("helvetica", 15) )
-bt_borrar.place(x=250,y=160, width=80, height=35)
+bt_borrar.place(x=410,y=175, width=120, height=35)
 
 # run 
 ventana_principal.mainloop()
